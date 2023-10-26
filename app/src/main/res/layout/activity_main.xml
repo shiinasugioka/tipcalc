@@ -7,12 +7,41 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:id="@+id/amount_text"
+        style="@style/amount_text_styles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/submit_tip_button"
+        style="@style/submit_tip_button_styles"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amount_text" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        style="@style/input_price_styles"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginBottom="311dp"
+        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/amount_text"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="291dp"
+        android:layout_height="22dp"
+        tools:layout_editor_absoluteX="53dp"
+        tools:layout_editor_absoluteY="277dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
