@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "edu.uw.ischool.shiina12.tipcalc"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "edu.uw.ischool.shiina12.tipcalc"
