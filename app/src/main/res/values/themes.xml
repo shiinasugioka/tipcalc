@@ -40,6 +40,10 @@
         <item name="android:hint">@string/price_input_hint</item>
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">#787878</item>
+        <item name="android:layout_marginStart">17dp</item>
+        <item name="android:layout_marginTop">124dp</item>
+        <item name="android:layout_marginEnd">68dp</item>
+        <item name="android:layout_marginBottom">311dp</item>
     </style>
 
     <style name="seekbar_styles">
@@ -53,5 +57,19 @@
         <item name="android:progress">0</item>
         <item name="android:progressBackgroundTint">#4C7491</item>
     </style>
-</resources>
 
+    <style name="seekbar_middle_tick_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">57dp</item>
+        <item name="android:layout_marginBottom">165dp</item>
+    </style>
+
+    <style name="seekbar_edge_tick_styles">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">67dp</item>
+        <item name="android:layout_marginEnd">57dp</item>
+        <item name="android:layout_marginBottom">413dp</item>
+    </style>
+</resources>

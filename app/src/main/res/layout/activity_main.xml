@@ -27,10 +27,6 @@
     <EditText
         android:id="@+id/editTextNumberDecimal"
         style="@style/input_price_styles"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="311dp"
         app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/amount_text"
@@ -43,6 +39,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+
+    <TextView
+        android:id="@+id/seekbar_first"
+        style="@style/seekbar_edge_tick_styles"
+        android:text="@string/first_tick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/seekbar_second"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/seekbar_fourth" />
+
+    <TextView
+        android:id="@+id/seekbar_second"
+        style="@style/seekbar_middle_tick_styles"
+        android:text="@string/second_tick"
+        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
+        app:layout_constraintStart_toEndOf="@+id/seekbar_first"
+        app:layout_constraintTop_toTopOf="@+id/seekbar_fourth" />
+
+    <TextView
+        android:id="@+id/seekbar_third"
+        style="@style/seekbar_middle_tick_styles"
+        android:text="@string/third_tick"
+        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
+        app:layout_constraintStart_toEndOf="@+id/seekbar_second"
+        app:layout_constraintTop_toTopOf="@+id/seekbar_fourth" />
+
+    <TextView
+        android:id="@+id/seekbar_fourth"
+        style="@style/seekbar_edge_tick_styles"
+        android:text="@string/fourth_tick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekbar_third"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

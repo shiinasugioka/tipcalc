@@ -3,4 +3,10 @@
     <string name="amount_text">Amount:</string>
     <string name="tip_button_text">Calculate Tip</string>
     <string name="price_input_hint">$</string>
+
+    <string name="first_tick">10%</string>
+    <string name="second_tick">15%</string>
+    <string name="third_tick">18%</string>
+    <string name="fourth_tick">20%</string>
+
 </resources>
