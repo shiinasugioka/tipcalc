@@ -28,10 +28,6 @@
     <style name="submit_tip_button_styles">
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">#4C4C4C</item>
-        <item name="android:layout_marginStart">117dp</item>
-        <item name="android:layout_marginTop">322dp</item>
-        <item name="android:layout_marginEnd">118dp</item>
-        <item name="android:layout_marginBottom">147dp</item>
         <item name="android:layout_width">176dp</item>
         <item name="android:layout_height">101dp</item>
         <item name="android:backgroundTint">#7BB3DC</item>

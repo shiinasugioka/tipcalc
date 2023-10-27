@@ -7,6 +7,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginBottom="20dp"
@@ -41,11 +42,14 @@
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="26dp"
         android:orientation="vertical"
         android:padding="20dp"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="220dp">
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
+        tools:layout_editor_absoluteX="-1dp">
 
         <SeekBar
             android:id="@+id/seekBar"
@@ -91,23 +95,43 @@
                 android:text="@string/fourth_tick" />
 
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="100dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="sample text"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="3dp"
         android:gravity="center"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="158dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="-16dp">
 
         <Button
             android:id="@+id/submit_tip_button"
-            style="@style/submit_tip_button_styles"
-            tools:layout_editor_absoluteX="117dp"
-            tools:layout_editor_absoluteY="483dp" />
+            style="@style/submit_tip_button_styles" />
 
     </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
