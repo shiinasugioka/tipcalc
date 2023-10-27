@@ -6,73 +6,108 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/amount_text"
-        style="@style/amount_text_styles"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/submit_tip_button"
-        style="@style/submit_tip_button_styles"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/amount_text" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextNumberDecimal"
-        style="@style/input_price_styles"
-        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/amount_text"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/amount_text"
+            style="@style/amount_text_styles"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        style="@style/seekbar_styles"
-        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        <EditText
+            android:id="@+id/editTextNumberDecimal"
+            style="@style/input_price_styles"
+            app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/amount_text"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/seekbar_first"
-        style="@style/seekbar_edge_tick_styles"
-        android:text="@string/first_tick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/seekbar_second"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/seekbar_fourth" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/seekbar_second"
-        style="@style/seekbar_middle_tick_styles"
-        android:text="@string/second_tick"
-        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
-        app:layout_constraintStart_toEndOf="@+id/seekbar_first"
-        app:layout_constraintTop_toTopOf="@+id/seekbar_fourth" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="220dp">
 
-    <TextView
-        android:id="@+id/seekbar_third"
-        style="@style/seekbar_middle_tick_styles"
-        android:text="@string/third_tick"
-        app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
-        app:layout_constraintStart_toEndOf="@+id/seekbar_second"
-        app:layout_constraintTop_toTopOf="@+id/seekbar_fourth" />
+        <SeekBar
+            android:id="@+id/seekBar"
+            style="@style/seekbar_styles"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
-    <TextView
-        android:id="@+id/seekbar_fourth"
-        style="@style/seekbar_edge_tick_styles"
-        android:text="@string/fourth_tick"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/seekbar_third"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/first_tick" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/second_tick" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/third_tick" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/fourth_tick" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="158dp">
+
+        <Button
+            android:id="@+id/submit_tip_button"
+            style="@style/submit_tip_button_styles"
+            tools:layout_editor_absoluteX="117dp"
+            tools:layout_editor_absoluteY="483dp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
