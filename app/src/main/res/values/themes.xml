@@ -7,6 +7,48 @@
 
     <style name="Theme.Tipcalc" parent="Base.Theme.Tipcalc" />
 
+    <!--  LinearLayout Styles  -->
+    <style name="textbox_container_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="seekbar_container_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">26dp</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="seekbar_label_container_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="tip_result_container_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">100dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="calculate_button_container_styles">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">260dp</item>
+        <item name="android:layout_marginTop">1dp</item>
+        <item name="android:layout_marginBottom">3dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!--    Element styles -->
     <style name="amount_text_styles">
         <item name="android:textSize">20sp</item>
         <item name="android:textColor">#2B2B2B</item>
@@ -39,22 +81,24 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:paddingBottom">20dp</item>
         <item name="android:max">3</item>
-        <item name="android:progress">0</item>
+        <item name="android:progress">1</item>
         <item name="android:progressBackgroundTint">#4C7491</item>
+        <item name="android:layout_gravity">center</item>
     </style>
 
-    <style name="seekbar_middle_tick_styles">
-        <item name="android:layout_width">wrap_content</item>
+    <style name="seekbar_number_styles">
+        <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">57dp</item>
-        <item name="android:layout_marginBottom">165dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
     </style>
 
-    <style name="seekbar_edge_tick_styles">
-        <item name="android:layout_width">wrap_content</item>
+    <style name="tip_result_styles">
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">67dp</item>
-        <item name="android:layout_marginEnd">57dp</item>
-        <item name="android:layout_marginBottom">413dp</item>
+        <item name="android:text">sample text here</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">20dp</item>
     </style>
+
 </resources>

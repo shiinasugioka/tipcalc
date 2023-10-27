@@ -7,13 +7,9 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout4"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:id="@+id/textbox_container"
+        style="@style/textbox_container_styles"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -30,7 +26,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <EditText
-            android:id="@+id/editTextNumberDecimal"
+            android:id="@+id/input_price"
             style="@style/input_price_styles"
             app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
             app:layout_constraintEnd_toEndOf="parent"
@@ -40,98 +36,72 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="26dp"
-        android:orientation="vertical"
-        android:padding="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        tools:layout_editor_absoluteX="-1dp">
+        android:id="@+id/seekbar_container"
+        style="@style/seekbar_container_styles"
+        app:layout_constraintBottom_toTopOf="@+id/tip_result_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textbox_container">
 
         <SeekBar
             android:id="@+id/seekBar"
             style="@style/seekbar_styles"
-            android:layout_gravity="center"
             app:layout_constraintBottom_toTopOf="@+id/submit_tip_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+            app:layout_constraintTop_toBottomOf="@+id/input_price" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+        <LinearLayout style="@style/seekbar_label_container_styles">
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:id="@+id/seekBar10"
+                style="@style/seekbar_number_styles"
                 android:text="@string/first_tick" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:id="@+id/seekBar15"
+                style="@style/seekbar_number_styles"
                 android:text="@string/second_tick" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:id="@+id/seekBar18"
+                style="@style/seekbar_number_styles"
                 android:text="@string/third_tick" />
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
+                android:id="@+id/seekBar20"
+                style="@style/seekbar_number_styles"
                 android:text="@string/fourth_tick" />
-
         </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="0dp">
+        android:id="@+id/tip_result_container"
+        style="@style/tip_result_container_styles"
+        app:layout_constraintBottom_toTopOf="@+id/calculate_button_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekbar_container">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="sample text"
-            android:textAlignment="center" />
+            android:id="@+id/tip_result"
+            style="@style/tip_result_styles" />
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="3dp"
-        android:gravity="center"
-        android:orientation="horizontal"
+        android:id="@+id/calculate_button_container"
+        style="@style/calculate_button_container_styles"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:layout_editor_absoluteX="-16dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tip_result_container">
 
         <Button
             android:id="@+id/submit_tip_button"
             style="@style/submit_tip_button_styles" />
 
     </LinearLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
