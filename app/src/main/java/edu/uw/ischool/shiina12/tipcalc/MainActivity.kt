@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         submitButton = findViewById(R.id.submit_tip_button)
         result = findViewById(R.id.tip_result)
 
+        submitButton.isEnabled = false
+
         inputPrice.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
@@ -48,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         submitButton.setOnClickListener {
-            updateResult()
+            if (submitButton.isEnabled) updateResult()
         }
     }
 
@@ -58,7 +60,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun roundInput() {
-        val inputText = inputPrice.text.toString()
+        val inputText = inputPrice.text.toString().replace("$", "")
         if (inputText.isNotEmpty()) {
             val inputNumber = inputText.toDouble()
             val decimalFormat = DecimalFormat("$#.##")

@@ -96,7 +96,7 @@
     <style name="tip_result_styles">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:text">sample text here</item>
+        <item name="android:text"> </item>
         <item name="android:textAlignment">center</item>
         <item name="android:textSize">20dp</item>
     </style>
